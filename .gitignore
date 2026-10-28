@@ -1,0 +1,57 @@
+# ===== Unity : dossiers générés automatiquement =====
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Uu]ser[Ss]ettings/
+/[Mm]emoryCaptures/
+/[Rr]ecordings/
+
+# Les fichiers .meta doivent être versionnés (sauf si leur asset est ignoré)
+!/[Aa]ssets/**/*.meta
+
+# ===== Clé API : ne JAMAIS publier =====
+/[Aa]ssets/_Project/Secrets/
+/[Aa]ssets/_Project/Secrets.meta
+
+# ===== Builds Android et sauvegardes Unity =====
+*.apk
+*.aab
+*.unitypackage
+*_BackUpThisFolder_ButDontShipItWithYourGame/
+*_BurstDebugInformation_DoNotShip/
+
+# ===== Fichiers générés par les éditeurs de code =====
+.vs/
+.vscode/
+.idea/
+.gradle/
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+*.pidb.meta
+*.pdb.meta
+*.mdb.meta
+
+# ===== Divers =====
+sysinfo.txt
+crashlytics-build.properties
+/[Aa]ssets/[Aa]ddressable[Aa]ssets[Dd]ata/*/*.bin*
+/[Aa]ssets/[Ss]treamingAssets/aa.meta
+/[Aa]ssets/[Ss]treamingAssets/aa/*
+Thumbs.db
+Desktop.ini
+.DS_Store

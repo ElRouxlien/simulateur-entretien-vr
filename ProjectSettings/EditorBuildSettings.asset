@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 0
+    path: Assets/Scenes/SampleScene.unity
+    guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 0
+    path: Assets/Samples/Google Cardboard XR Plugin for Unity/1.35.0/Hello Cardboard/Scenes/HelloCardboard.unity
+    guid: 03c48c5e809944fa4afcae9973709f26
+  - enabled: 1
+    path: Assets/InterviewScene.unity
+    guid: 07bfd6f30558260499a7c12db0c2862b
+  m_configObjects:
+    com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: addd976d9ffdc124dafab9ba348a5885, type: 2}
