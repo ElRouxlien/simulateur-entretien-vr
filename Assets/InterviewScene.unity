@@ -833,15 +833,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 555d2578b9b49094686e55085efdaf10, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 555d2578b9b49094686e55085efdaf10, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 555d2578b9b49094686e55085efdaf10, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 555d2578b9b49094686e55085efdaf10, type: 3}
       propertyPath: m_LocalPosition.x
@@ -902,7 +902,112 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 555d2578b9b49094686e55085efdaf10, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1052888810}
+    - targetCorrespondingSourceObject: {fileID: 7131880634743037553, guid: 555d2578b9b49094686e55085efdaf10, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 730603570}
   m_SourcePrefab: {fileID: 100100000, guid: 555d2578b9b49094686e55085efdaf10, type: 3}
+--- !u!1 &730603569 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7131880634743037553, guid: 555d2578b9b49094686e55085efdaf10, type: 3}
+  m_PrefabInstance: {fileID: 730603568}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &730603570
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 730603569}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &836124749
 GameObject:
   m_ObjectHideFlags: 0
@@ -1450,6 +1555,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb9ff6af126759443aea11735f039c6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RecruiterVoice
+  config: {fileID: 11400000, guid: 12f46cd0bfb6b864da5c07f88489bd28, type: 2}
+  audioSource: {fileID: 730603570}
+  cloudTimeout: 20
+  levelGain: 6
   language: fr
   country: FR
   speechRate: 1

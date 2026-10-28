@@ -3,7 +3,8 @@ using UnityEngine;
 
 /// <summary>
 /// Anime le visage du recruteur avec ses blendshapes (format ARKit) :
-/// - lipsync simulé : la mâchoire et les lèvres bougent pendant que la voix parle ;
+/// - lipsync : avec la voix ElevenLabs, la bouche suit le volume réel de la voix ;
+///   avec la voix Android (jouée hors de Unity), le mouvement est simulé ;
 /// - clignement des yeux naturel, à intervalles aléatoires.
 /// Le script cherche les blendshapes par nom dans tous les meshes du personnage
 /// (tête, dents, etc.), pour que tout bouge ensemble.
@@ -79,8 +80,20 @@ public class RecruiterFace : MonoBehaviour
         float targetMouth = 0f;
         float targetFunnel = 0f;
 
-        if (speaking)
+        if (speaking && voice.IsLoadingAudio)
         {
+            // Audio en cours de téléchargement : bouche fermée en attendant.
+        }
+        else if (speaking && voice.HasAudioLevel)
+        {
+            // Lipsync réel : l'ouverture suit le volume de la voix.
+            float t = Time.time;
+            targetMouth = voice.AudioLevel * mouthOpenAmount;
+            targetFunnel = Mathf.Clamp01(Mathf.PerlinNoise(noiseSeed + 50f, t * 1.7f) - 0.45f) * 0.8f * voice.AudioLevel;
+        }
+        else if (speaking)
+        {
+            // Lipsync simulé (voix Android, jouée hors de Unity).
             float t = Time.time;
             // Ouverture rythmée (syllabes) + variation aléatoire, pour éviter un mouvement mécanique.
             float syllable = Mathf.Abs(Mathf.Sin(t * syllablesPerSecond * Mathf.PI));
